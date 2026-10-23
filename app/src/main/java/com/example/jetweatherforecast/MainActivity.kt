@@ -13,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetweatherforecast.navigation.WeatherNavigation
 import com.example.jetweatherforecast.ui.theme.JetWeatherForecastTheme
@@ -32,9 +33,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun WeatherApp() {
-
     JetWeatherForecastTheme {
-        Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+        Scaffold(modifier = Modifier.fillMaxSize(),
+            containerColor = Color.Transparent) { innerPadding ->
             Column(modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding),

@@ -2,6 +2,7 @@ package com.example.jetweatherforecast.network
 
 import com.example.jetweatherforecast.model.WeatherItem
 import com.example.jetweatherforecast.util.Constants
+import com.example.jetweatherforecast.model.Weather
 import retrofit2.http.GET
 import retrofit2.http.Query
 import javax.inject.Singleton
@@ -13,6 +14,6 @@ interface WeatherApi {
         @Query("q") query : String,
         @Query("units") units: String = "imperial",
         @Query("appid") appid: String = Constants.API_KEY
-    ): WeatherItem
+    ): Weather
 
 }
